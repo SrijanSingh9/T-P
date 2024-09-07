@@ -73,12 +73,6 @@
     <!-- Navbar -->
     <nav class="bg-gray-800 p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <a class="text-white text-2xl font-bold" href="#">Training & Placement</a>
-            <div class="flex space-x-4">
-                <a class="text-white hover:text-gray-300" href="#">Home</a>
-                <a class="text-white hover:text-gray-300" href="#">Services</a>
-                <a class="text-white hover:text-gray-300" href="#">About</a>
-                <a class="text-white hover:text-gray-300" href="#">Contact</a>
 
                 @if (Route::has('login'))
                     @auth
