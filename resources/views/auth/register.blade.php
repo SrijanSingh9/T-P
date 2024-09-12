@@ -1,69 +1,65 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+<div style="max-width: 1280px; margin: 0 auto;">
+    <div style="display: flex; justify-content: center;">
+        <div style="width: 100%; max-width: 700px;">
+            <div style="border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
+                <div style="background-color: #f8f9fa; padding: 1rem; border-bottom: 1px solid #ddd;">{{ __('Register') }}</div>
 
-                <div class="card-body">
+                <div style="padding: 1.5rem;">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="name" style="display: block; margin-bottom: 0.5rem;">{{ __('Name') }}</label>
+                            <div>
+                                <input id="name" type="text" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;" class="@error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span style="color: #e3342f; font-size: 0.875rem;" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                        <div style="margin-bottom: 1rem;">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem;">{{ __('Email Address') }}</label>
+                            <div>
+                                <input id="email" type="email" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span style="color: #e3342f; font-size: 0.875rem;" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                        <div style="margin-bottom: 1rem;">
+                            <label for="password" style="display: block; margin-bottom: 0.5rem;">{{ __('Password') }}</label>
+                            <div>
+                                <input id="password" type="password" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;" class="@error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span style="color: #e3342f; font-size: 0.875rem;" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                        <div style="margin-bottom: 1rem;">
+                            <label for="password-confirm" style="display: block; margin-bottom: 0.5rem;">{{ __('Confirm Password') }}</label>
+                            <div>
+                                <input id="password-confirm" type="password" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <div>
+                            <div style="text-align: center;">
+                                <button type="submit" style="padding: 0.5rem 1rem; background-color: #3490dc; color: #fff; border: none; border-radius: 4px; cursor: pointer;">
                                     {{ __('Register') }}
                                 </button>
                             </div>

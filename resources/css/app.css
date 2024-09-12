@@ -1,9 +1,55 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: 'Nunito', sans-serif;
+    background-color: #D3D3D3;
+    color: #333;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+}
+
+.hero {
+    background: #343a40;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    text-align: center;
+    color: #343a40;
+}
+
+.footer {
+    background: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 a {
@@ -49,7 +95,7 @@ header {
 
 /* Infinite Scroll Loader */
 .ajax-load {
-    background: #e1e1e1;
+    background: #0b23c1;
     padding: 10px 0;
     width: 100%;
     text-align: center;
